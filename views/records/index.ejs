@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Records</title>
+  </head>
+  <body>
+    <h2><a href="/records/new">Add a record</a></h2>
+    <ul>
+      <% for(let record of records) { %>
+      <li><a href="/records/<%=record._id%>"> <%= record.name %> </a></li>
+      <% } %>
+    </ul>
+  </body>
+</html>

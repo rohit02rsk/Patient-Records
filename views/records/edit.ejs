@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Record</title>
+  </head>
+
+  <body>
+    <h1>Edit Record</h1>
+    <form action="/records/<%=record._id%>?_method=PUT" method="POST">
+      <label for="name">Patient name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Patient name"
+        value="<%= record.name %> "
+      />
+
+      <label for="doctor">Doctor name</label>
+      <input
+        type="text"
+        id="doctor"
+        name="doctor"
+        placeholder="Doctor name"
+        value="<%= record.doctor %> "
+      />
+
+      <label for="name">Illness</label>
+      <input
+        type="text"
+        id="illness"
+        name="illness"
+        placeholder="Illness"
+        value="<%= record.illness %> "
+      />
+      <button>Submit</button>
+    </form>
+    <a href="/records">Cancel</a>
+  </body>
+</html>
